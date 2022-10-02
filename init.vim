@@ -39,9 +39,6 @@ set fileformat=unix
 " color theme
 colorscheme darcula
 
-"nerd tree plugin configurations
-autocmd VimEnter * NERDTree | wincmd p
-
 " spell checking
 set nospell
 let g:enable_spelunker_vim = 1
