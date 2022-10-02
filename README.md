@@ -9,5 +9,5 @@ Clean and practical neovim configuration settings
 
 ### Installation
 ```
-git clone git@github.com:kanenorman/neovim-config.git ~/.config.nvim
+git clone git@github.com:kanenorman/neovim-config.git ~/.config/nvim
 ```
