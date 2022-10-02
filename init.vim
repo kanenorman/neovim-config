@@ -1,10 +1,16 @@
 " install plugins
 call plug#begin('~/.vim/plugged')
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+Plug 'ellisonleao/glow.nvim'
+Plug 'KadoBOT/nvim-spotify', { 'do': 'make' }
+Plug 'preservim/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kamykn/popup-menu.nvim'
 Plug 'kamykn/spelunker.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'morhetz/gruvbox'
+Plug 'doums/darcula'
+Plug 'neovim/nvim-lspconfig'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'smzm/hydrovim'
 Plug 'preservim/nerdtree'
@@ -32,13 +38,10 @@ set autoindent
 set fileformat=unix
 
 " color theme
-colorscheme gruvbox
+colorscheme darcula
 
 "nerd tree plugin configurations
 autocmd VimEnter * NERDTree | wincmd p
-
-" tabnine auto completion
-" execute ":CocInstall coc-tabnine"
 
 " spell checking
 set nospell
@@ -46,3 +49,15 @@ let g:enable_spelunker_vim = 1
 let g:spelunker_highlight_type = 1
 let g:spelunker_check_type = 1
 
+" tagbar
+nmap <F10> :TagbarToggle<CR>
+
+" toggle term 
+lua require('toggleterm_config')
+
+" gitsigns
+lua require('gitsigns_config')
+
+" easy tab toggling
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
