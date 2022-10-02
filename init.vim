@@ -1,9 +1,8 @@
 " install plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'ellisonleao/glow.nvim'
-Plug 'KadoBOT/nvim-spotify', { 'do': 'make' }
 Plug 'preservim/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kamykn/popup-menu.nvim'
