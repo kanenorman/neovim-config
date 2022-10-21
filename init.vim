@@ -8,13 +8,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kamykn/popup-menu.nvim'
 Plug 'kamykn/spelunker.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'doums/darcula'
+Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'smzm/hydrovim'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'psf/black', { 'branch': 'stable' }
 call plug#end()
 
 " set text ecoding
@@ -37,7 +38,8 @@ set autoindent
 set fileformat=unix
 
 " color theme
-colorscheme darcula
+colorscheme gruvbox
+set bg=dark
 
 " spell checking
 set nospell
@@ -51,8 +53,11 @@ nmap <F10> :TagbarToggle<CR>
 " toggle term 
 lua require('toggleterm_config')
 
-" gitsigns
-lua require('gitsigns_config')
+" autosave
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
 
 " easy tab toggling
 nnoremap <C-Left> :tabprevious<CR>
