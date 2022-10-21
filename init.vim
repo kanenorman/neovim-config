@@ -5,14 +5,11 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'ellisonleao/glow.nvim'
 Plug 'preservim/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'kamykn/popup-menu.nvim'
 Plug 'kamykn/spelunker.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 Plug 'MunifTanjim/nui.nvim'
-Plug 'smzm/hydrovim'
-Plug 'preservim/nerdtree'
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'psf/black', { 'branch': 'stable' }
