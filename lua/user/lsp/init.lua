@@ -6,4 +6,4 @@ end
 require "user.lsp.mason"
 require("user.lsp.handlers").setup()
 require "user.lsp.null-ls"
-vim.cmd "autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.html,*.css,*.scss,*.md,*.markdown,*.yaml,*.json,*.yml,*.py,*.lua,*.rb,*.php,*.go,*.java,*.h,*.hpp,*.c,*.cpp,*.rs,*.sh lua vim.lsp.buf.formatting_sync(nil, 1000)"
+vim.cmd "autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.html,*.css,*.scss,*.md,*.markdown,*.yaml,*.json,*.yml,*.py,*.lua,*.rb,*.php,*.go,*.java,*.h,*.hpp,*.c,*.cpp,*.rs,*.sh lua vim.lsp.buf.format(nil, 1000)"
