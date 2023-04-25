@@ -71,7 +71,7 @@ return packer.startup(function(use)
   }
 
   -- docstrings
-  use { "kkoomen/vim-doge", run = ":call doge#install()"}
+  use { "kkoomen/vim-doge", run = ":call doge#install()" }
 
   -- Colorschemes
   use { "kanenorman/gruvbox-darker.nvim" }
@@ -102,7 +102,7 @@ return packer.startup(function(use)
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+    run = ":TSUpdate",
   }
 
   -- Git
