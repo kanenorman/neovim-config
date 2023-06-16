@@ -12,13 +12,13 @@ local dashboard = require "alpha.themes.dashboard"
 
 local function header()
   local date = os.date "  %m-%d-%Y"
-  local website = "kanenorman.com"
-  return date, website
+  local copyright = "© kane norman"
+  return date, copyright
 end
 
-local date, website = header()
+local date, copyright = header()
 
-dashboard.section.header.val = { date, website }
+dashboard.section.header.val = { date, copyright }
 dashboard.section.buttons.val = {
   dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
   dashboard.button("e", " " .. " New file", ":ene <BAR> startinsert <CR>"),
