@@ -4,12 +4,9 @@ if not null_ls_status_ok then
 end
 
 local builtins = null_ls.builtins
--- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 local formatting = builtins.formatting
--- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = builtins.diagnostics
 
--- https://github.com/prettier-solidity/prettier-plugin-solidity
 null_ls.setup {
   debug = false,
   sources = {
@@ -20,10 +17,13 @@ null_ls.setup {
     formatting.stylua,
     formatting.google_java_format,
     diagnostics.flake8.with { extra_args = { "--max-line-length", "88" } }, --black formatter defaults to 88
-    diagnostics.mypy,
-    diagnostics.isort,
+    diagnostics.mypy.with { extra_args = { "--ignore-missing-imports" } },
+    formatting.isort,
     diagnostics.eslint,
-    builtins.hover,
+    builtins.hover.dictionary,
     formatting.codespell,
+    builtins.code_actions.gitsigns,
+    diagnostics.pycodestyle,
+    diagnostics.pydocstyle,
   },
 }
