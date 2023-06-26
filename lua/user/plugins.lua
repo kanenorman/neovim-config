@@ -106,6 +106,9 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
 
+  -- Tagbar
+  use { "preservim/tagbar" }
+
   -- Git
   use { "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" }
 
