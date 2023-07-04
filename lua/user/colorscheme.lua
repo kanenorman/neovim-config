@@ -1,11 +1,17 @@
-local colorscheme = "onedark"
+local colorscheme = "no-clown-fiesta"
 
-require("onedark").setup {
-  style = "warmer",
-  transparent = true,
-  trem_colors = true,
+require("no-clown-fiesta").setup {
+  transparent = true, -- Enable this to disable the bg color
+  styles = {
+    -- You can set any of the style values specified for `:h nvim_set_hl`
+    comments = {},
+    keywords = {},
+    functions = {},
+    variables = {},
+    type = { bold = true },
+    lsp = { underline = true },
+  },
 }
-require("onedark").load()
 
 local status_ok, _ = pcall(vim.cmd.colorscheme, colorscheme)
 if not status_ok then
