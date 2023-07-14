@@ -1,4 +1,4 @@
-local colorscheme = "no-clown-fiesta"
+local colorscheme = "github_dark"
 
 require("no-clown-fiesta").setup {
   transparent = true, -- Enable this to disable the bg color
@@ -11,6 +11,10 @@ require("no-clown-fiesta").setup {
     type = { bold = true },
     lsp = { underline = true },
   },
+}
+
+require("github-theme").setup {
+  options = { transparent = true },
 }
 
 local status_ok, _ = pcall(vim.cmd.colorscheme, colorscheme)
