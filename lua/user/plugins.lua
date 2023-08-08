@@ -74,10 +74,15 @@ return packer.startup(function(use)
   use { "kkoomen/vim-doge", run = ":call doge#install()" }
 
   -- Colorschemes
+  use { "olivercederborg/poimandres.nvim" }
   use { "kanenorman/gruvbox-darker.nvim" }
   use { "aktersnurra/no-clown-fiesta.nvim" }
   use { "projekt0n/github-nvim-theme" }
   use { "doums/darcula" }
+  use {
+    "uloco/bluloco.nvim",
+    requires = { "rktjmp/lush.nvim" },
+  }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
