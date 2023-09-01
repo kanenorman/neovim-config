@@ -73,16 +73,8 @@ return packer.startup(function(use)
   -- docstrings
   use { "kkoomen/vim-doge", run = ":call doge#install()" }
 
-  -- Colorschemes
-  use { "olivercederborg/poimandres.nvim" }
-  use { "kanenorman/gruvbox-darker.nvim" }
-  use { "aktersnurra/no-clown-fiesta.nvim" }
-  use { "projekt0n/github-nvim-theme" }
-  use { "doums/darcula" }
-  use {
-    "uloco/bluloco.nvim",
-    requires = { "rktjmp/lush.nvim" },
-  }
+  -- colorschemes
+  use { "Yazeed1s/minimal.nvim" }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -97,8 +89,13 @@ return packer.startup(function(use)
   use { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" } -- a bunch of snippets to use
 
   -- LSP
-  -- use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
-  use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP
+  use {
+    "neovim/nvim-lspconfig",
+    commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda",
+    opts = {
+      inlay_hints = { enabled = true },
+    },
+  } -- enable LSP
   use { "williamboman/mason.nvim", commit = "bfc5997e52fe9e20642704da050c415ea1d4775f" }
   use { "williamboman/mason-lspconfig.nvim", commit = "0eb7cfefbd3a87308c1875c05c3f3abac22d367c" }
   use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
@@ -126,6 +123,14 @@ return packer.startup(function(use)
 
   -- formatters
   use { "prettier/vim-prettier" }
+
+  -- browser
+  use {
+    "glacambre/firenvim",
+    run = function()
+      vim.fn["firenvim#install"](0)
+    end,
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
