@@ -75,6 +75,7 @@ return packer.startup(function(use)
 
   -- colorschemes
   use { "Yazeed1s/minimal.nvim" }
+  use { "vermdeep/darcula_dark.nvim", requires = "rktjmp/lush.nvim" }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
