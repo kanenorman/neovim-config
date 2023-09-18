@@ -24,7 +24,6 @@ null_ls.setup {
     builtins.hover.dictionary,
     formatting.codespell,
     builtins.code_actions.gitsigns,
-    diagnostics.pycodestyle,
     diagnostics.pydocstyle,
   },
 }
