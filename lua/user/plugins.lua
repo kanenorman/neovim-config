@@ -74,8 +74,7 @@ return packer.startup(function(use)
   use { "kkoomen/vim-doge", run = ":call doge#install()" }
 
   -- colorschemes
-  use { "Yazeed1s/minimal.nvim" }
-  use { "vermdeep/darcula_dark.nvim", requires = "rktjmp/lush.nvim" }
+  use { "projekt0n/github-nvim-theme" }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -132,6 +131,9 @@ return packer.startup(function(use)
       vim.fn["firenvim#install"](0)
     end,
   }
+
+  -- plugins
+  use { "github/copilot.vim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
