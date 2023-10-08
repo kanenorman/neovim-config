@@ -19,7 +19,7 @@ null_ls.setup {
     formatting.sql_formatter,
     diagnostics.flake8.with { extra_args = { "--max-line-length", "88" } }, --black formatter defaults to 88
     diagnostics.mypy.with { extra_args = { "--ignore-missing-imports" } },
-    formatting.isort,
+    formatting.isort.with { extra_args = { "--profile", "black" } },
     diagnostics.eslint,
     builtins.hover.dictionary,
     formatting.codespell,
